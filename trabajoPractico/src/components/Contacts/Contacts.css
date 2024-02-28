@@ -1,0 +1,357 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Proxima Nova", -apple-system, "Helvetica Neue", helvetica, roboto, arial, sans-serif;
+}
+
+body {
+    background-color: #FFF0E5;
+    background-image: url('../../assets/doodlesBg.png');
+    background-repeat: repeat;
+    background-size: 300px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+
+
+#form {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    width: fit-content;
+    border: 2px solid grey;
+    border-radius: 5px;
+    z-index: 50;
+    background-color: whitesmoke;
+    position: absolute;
+    border: 2px solid rgb(199, 199, 199);
+    margin-top: 20px;
+
+}
+
+#form .phone,
+.email,
+.lastName,
+.name {
+    display: flex;
+    flex-direction: column;
+}
+
+#form input {
+    padding: 8px;
+    border-radius: 5px;
+    border: 2px solid rgb(199, 199, 199);
+    width: 200px;
+}
+
+#form input:focus {
+    outline: none;
+}
+
+#form div label {
+    font-size: 15px;
+}
+
+#form button {
+
+    background-color: #3FA859;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bolder;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    width: 220px;
+}
+
+#form button:hover {
+    cursor: pointer;
+    background-color: #35cf5b;
+}
+
+
+
+/* iconoX */
+
+.IconX {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+}
+
+.IconX :hover {
+    cursor: pointer;
+    color: rgb(97, 97, 97);
+}
+
+
+.faPlus {
+    color: white;
+    font-weight: bolder;
+    font-size: 25px;
+    padding: 10px;
+    background-color: #3FA859;
+    position: fixed;
+    border-radius: 50%;
+    border: 5px solid white;
+    top: 50%;
+    z-index: 20;
+}
+
+.faPlus:hover {
+    cursor: pointer;
+    background-color: #35cf5b;
+}
+
+
+/* Container List */
+
+.containerMain {
+    display: flex;
+    justify-content: center;
+
+}
+
+.containerList,
+.filteredData {
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 99%;
+    margin-top: 150px;
+    max-height: 380px;
+
+
+}
+
+
+
+.noInfoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    top: 320px;
+    font-weight: bolder;
+    color: #9d9d9d;
+    display: flex;
+    background-color: #FFF0E5;
+    padding: 20px;
+    position: absolute;
+
+}
+
+.noInfoContainer ul {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+
+}
+
+.containerList ul,
+.filteredData ul {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow-y: auto;
+    max-height: 300px;
+    align-items: center;
+}
+
+
+.containerList ul .eachContact {
+    background-color: white;
+    border: 2px solid #cecece;
+    padding: 20px;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    width: 800px;
+    flex: 1;
+
+
+}
+
+.deleteButton {
+    background-color: red;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px 0px grey;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+}
+
+.deleteButton:hover {
+    cursor: pointer;
+}
+
+
+
+.filteredData ul .eachContact {
+
+    background-color: white;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    width: 800px;
+    padding: 20px;
+    border: 2px solid #cecece;
+
+}
+
+
+
+/* Footer */
+
+footer {
+    display: flex;
+    background-color: #FFF0E5;
+    width: 100%;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-bottom: 0;
+    margin-top: 100px;
+    align-items: end;
+    position: fixed;
+    bottom: 0px;
+    padding: 30px 0px 20px 0px;
+    align-items: center;
+    
+
+
+}
+
+.footerContainer {
+    border-top: 2px solid #fccaa6;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+   padding: 10px 0px 10px 0px; 
+    align-self: center;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    text-align: center;
+    gap: 5px;
+    color: #9D9D9D;
+
+}
+
+footer ul a {
+    text-decoration: none;
+    color: #9D9D9D;
+}
+
+.socialMedia {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    font-size: 18px;
+}
+
+/*------------------- Media queries------------------- */
+
+/* Media queries 900px */
+
+@media (max-width: 900px) {
+
+    .containerList,
+    .filteredData {
+        align-items: center;
+    }
+
+    .containerList ul,
+    .filteredData ul {
+        max-height: 200px;
+        width: fit-content;
+
+    }
+
+    .filteredData ul .eachContact,
+    .containerList ul .eachContact {
+        width: 600px;
+        font-size: 12px;
+
+    }
+}
+
+/* Media queries 700px */
+
+@media (max-width: 700px){
+    .filteredData ul .eachContact,
+    .containerList ul .eachContact{
+        width: 400px;
+    }
+    .deleteButton{
+        font-size: 10px;
+    }
+    .noInfoContainer{
+        font-size: 15px;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+}
+
+/* Media queries 500px */
+
+@media (max-width: 500px){
+    .filteredData ul .eachContact,
+    .containerList ul .eachContact{
+        width: 300px;
+    }
+
+    .justInfo{
+        display: flex;
+        flex-direction: column;
+    }
+    .deleteButton{
+        font-size: 15px;
+    }
+    .filteredData ul .eachContact,
+    .containerList ul .eachContact {
+        font-size: 15px;
+        align-items: first baseline;
+
+    }
+    .faPlus {
+        top: 25%;
+        right: 50%;
+    }
+
+    #form {
+        padding: 30px;
+    }
+}
+
+/* Media queries 400px */
+
+@media (max-width: 400px){
+    .filteredData ul .eachContact,
+    .containerList ul .eachContact{
+        width: 250px;
+    }
+    #form input{
+        width: 250px;
+    }
+
+    #form button{
+        width: 270px;
+    }
+ 
+}

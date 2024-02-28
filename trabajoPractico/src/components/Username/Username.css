@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-family: "Proxima Nova", -apple-system, "Helvetica Neue", helvetica, roboto, arial, sans-serif;
+}
+
+
+.containerUser{
+    border: 2px solid black;
+    display: flex;
+    width: 380px;
+    height: 500px;
+    background-color: purple;
+    align-items: center;
+    padding: 30px 20px 10px 20px;
+    flex-direction: column;
+    gap: 30px;
+    position: absolute;
+    top: 100px;
+}
+
+.logoWhiteContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerUser form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    height: 70%;    
+    background-color: #FFF0E5;
+    
+
+}
+
+.containerUser form .labelAndInput{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    border-radius: 8px;
+    border: 1px solid #cecece;
+    overflow: hidden;
+
+}
+
+.containerUser form .labelAndInput label{
+    background-color: purple;
+    color: white;
+    font-size: 15px;
+    font-family:  "Proxima Nova", -apple-system, "Helvetica Neue", helvetica, roboto, arial, sans-serif;
+    padding: 8px;
+    font-weight: bold;
+}
+
+
+.containerUser form .labelAndInput input{
+    padding: 8px;
+    border: 1px solid #cecece;
+    width: 280px;
+    align-self: center; 
+    background-color: #D9CCF5;
+    color: purple;
+    font-weight: bold;
+}
+
+.containerUser form .labelAndInput input:focus{
+    outline: none;
+}
+
+.containerUser form button{
+    width: 300px;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    background-color: #3FA859;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.containerUser form button:hover{
+    background-color: #52e176;
+    cursor: pointer ;
+}
