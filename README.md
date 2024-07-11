@@ -14,9 +14,15 @@ This Contact list was built to add contacts, delete them, filter the contact lis
 1. Download the folder.
 2. Open the code editor of your choice.
 3. Go to the "CMD" terminal
-4. Paste this in the terminal and press enter:
+4. Navigate to the project directory.
+5. Install the dependencies:
 
-```
- npm run dev
+   ```bash
+   npm install
+   
+6. Paste this in the terminal and press enter:
 
-```
+  ```bash
+   npm run dev
+  ```
+7. Click the http://localhost link showned in the terminal to see the application.
